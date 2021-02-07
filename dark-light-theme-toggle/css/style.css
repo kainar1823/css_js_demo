@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/* global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 16px/1.5 "Poppins", sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #f2f2f2;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* switch component styling */
+.switch {
+  display: inline-block;
+  vertical-align: middle;
+  width: 44px;
+  height: 26px;
+  position: relative;
+}
+.switch input[type=checkbox] {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.switch label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #d1d1d1;
+  border-radius: 13px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.switch label::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #fcfcfc;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.switch input[type=checkbox]:checked + label {
+  background-color: #636e72;
+}
+.switch input[type=checkbox]:checked + label::after {
+  transform: translateX(18px);
+}
+
+/* default theme (light) */
+html {
+  --body-bg-color: #f2f2f2;
+  --cnt-bg-color: #fab1a0;
+  --headline-color: #d63031;
+  --text-color: #fff;
+}
+
+/* dark theme */
+html[data-theme=dark] {
+  --body-bg-color: #2d3436;
+  --cnt-bg-color: #e17055;
+  --headline-color: #ffeaa7;
+  --text-color: #f2f2f2;
+}
+
+html,
+html * {
+  transition: all 0.5s ease;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--body-bg-color);
+  color: var(--text-color);
+}
+
+.container {
+  width: 60vw;
+  height: 30vh;
+  background-color: var(--cnt-bg-color);
+  border-radius: 20px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-areas: "title switch" "content content";
+  justify-items: start;
+}
+
+h1 {
+  grid-area: title;
+  color: var(--headline-color);
+}
+
+.switch {
+  grid-area: switch;
+  justify-self: end;
+}
+
+p {
+  grid-area: content;
+  font-size: 1.1em;
+}

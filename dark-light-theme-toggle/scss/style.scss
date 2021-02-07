@@ -1,0 +1,59 @@
+@import "global";
+
+@import "switch";
+
+/* default theme (light) */
+html {
+    --body-bg-color: #f2f2f2;
+    --cnt-bg-color: #fab1a0;
+    --headline-color: #d63031;
+    --text-color: #fff;
+}
+
+/* dark theme */
+html[data-theme="dark"] {
+    --body-bg-color: #2d3436;
+    --cnt-bg-color: #e17055;
+    --headline-color: #ffeaa7;
+    --text-color: #f2f2f2;
+}
+
+html,
+html * {
+    transition: all 0.5s ease;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--body-bg-color);
+    color: var(--text-color);
+}
+
+.container {
+    width: 60vw;
+    height: 30vh;
+    background-color: var(--cnt-bg-color);
+    border-radius: 20px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas: "title switch" "content content";
+    justify-items: start;
+}
+
+h1 {
+    grid-area: title;
+    color: var(--headline-color);
+}
+
+.switch {
+    grid-area: switch;
+    justify-self: end;
+}
+
+p {
+    grid-area: content;
+    font-size: 1.1em;
+}
