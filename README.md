@@ -12,7 +12,7 @@ toggle between dark and light theme by changing 'data-theme' attribute of 'html'
 
 ## Clock
 
-css + vanilla js clock
+    css + vanilla js clock
 
 ## Mini games
 
