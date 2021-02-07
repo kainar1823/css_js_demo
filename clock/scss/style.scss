@@ -140,6 +140,7 @@ $dial-diameter: $diameter * 0.85;
             width: 5px;
             transform-origin: center bottom;
             transition: transform 0.5s ease;
+            box-shadow: 0 0 10px 2px rgba($color: #000000, $alpha: 0.2);
         }
         .hour {
             height: 20%;
