@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tic-Tac-Toe | mini-game</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <h1>Tic-Tac-Toe</h1>
+            </header>
+
+            <section id="tool-box">
+                <div class="level-select-box">
+                    Level:
+                    <div class="level-selecer">
+                        <input type="checkbox" id="level" value="Medium" />
+                        <label for="level">Medium <i class="icon icon-arrow-down"></i></label>
+                        <ul>
+                            <li>Easy</li>
+                            <li>
+                                <i class="icon icon-checked"></i>
+                                Medium
+                            </li>
+                            <li>Impossible</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="player-btn player-btn-x">
+                    <input type="radio" name="player-btn" id="player-x" value="x" checked />
+                    <label for="player-x">
+                        <i class="icon icon-x"></i>
+                        <span id="score-x">0</span>
+                    </label>
+                </div>
+
+                <div class="player-btn player-btn-o">
+                    <input type="radio" name="player-btn" id="player-o" value="o" />
+                    <label for="player-o">
+                        <i class="icon icon-o"></i>
+                        <span id="score-o">0</span>
+                    </label>
+                </div>
+
+                <div class="status-info">Start game or select player</div>
+            </section>
+
+            <section id="screen">
+                <div class="grid"></div>
+                <div class="result">
+                    <div class="icon-container">
+                        <i class="icon icon-x"></i>
+                        <i class="icon icon-o"></i>
+                    </div>
+                    <span>Draw game</span>
+                </div>
+            </section>
+
+            <button type="button" id="btn-restart">Restart Game</button>
+        </div>
+
+        <script src="js/app.js"></script>
+    </body>
+</html>
