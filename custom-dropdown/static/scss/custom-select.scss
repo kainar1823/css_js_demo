@@ -1,0 +1,85 @@
+$cs-border-color: #222;
+$cs-background: #fff;
+$cs-selected-bg-color: rgb(17, 103, 233);
+$cs-selected-fore-color: #fff;
+$cs-hover-bg-color: rgb(123, 173, 248);
+$cs-hover-fore-color: #fff;
+
+.custom-select {
+    display: none;
+}
+
+.cs-container {
+    outline: none;
+    position: relative;
+    background-color: $cs-background;
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        user-select: none;
+    }
+
+    &:focus {
+        .cs-label {
+            box-shadow: inset 1px 1px 0px 0px rgba($color: $cs-border-color, $alpha: 1),
+                inset -1px -1px 0px 0px rgba($color: $cs-border-color, $alpha: 1);
+        }
+    }
+}
+
+.cs-label {
+    outline: none;
+    border: 1px solid $cs-border-color;
+    padding: 0.2em 1.5em 0.2em 0.5em;
+    border-radius: 3px;
+    position: relative;
+
+    &::after {
+        $arrow-size: 0.3em;
+
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: $arrow-size solid transparent;
+        border-right: $arrow-size solid transparent;
+        border-top: $arrow-size solid $cs-border-color;
+        position: absolute;
+        right: 0.5em;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.cs-list {
+    list-style: none;
+    border: 1px solid $cs-border-color;
+    border-top: 0;
+    display: none;
+    position: absolute;
+    // width: 100%;
+    background-color: $cs-background;
+    z-index: 500;
+    padding: 0.2em 0;
+    max-height: 15em;
+    overflow: auto;
+
+    &.show {
+        display: block;
+    }
+
+    li {
+        padding: 0.2em 0.5em;
+
+        &.selected {
+            background-color: $cs-selected-bg-color;
+            color: $cs-selected-fore-color;
+        }
+
+        &:hover {
+            background-color: $cs-hover-bg-color;
+            color: $cs-hover-fore-color;
+        }
+    }
+}

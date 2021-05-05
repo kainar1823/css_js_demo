@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Custom Dropdown list</title>
+        <link rel="stylesheet" href="./static/css/style.css" />
+        <link rel="stylesheet" href="./static/css/custom-select.css" />
+        <script src="./static/js/custom-select.js" defer></script>
+        <script src="./static/js/main.js" defer></script>
+    </head>
+    <body>
+        <div id="intro">
+            <h1>Custom dropdown list</h1>
+            <h3>How to use:</h3>
+            <ol>
+                <li>
+                    Add stylesheet in head. (You can change the style in SCSS file "custom-select.scss")
+                    <code>&lt;link rel="stylesheet" href="custom-select.css" /&gt;</code>
+                </li>
+                <li>
+                    Add script in head and add "defer" attribute to it.
+                    <code>&lt;script src="custom-select.js" defer&gt;&lt;/script&gt;</code>
+                </li>
+                <li>
+                    Add class "custom-select" to the element you want to customize.
+                    <code>&lt;select class="custom-select"&gt;&lt;/select&gt;</code>
+                </li>
+            </ol>
+
+            <h3>Feature:</h3>
+            <ul>
+                <li>Highly customizable</li>
+                <li>Change selection by rolling the mouse wheel on top.</li>
+                <li>Change selection by pressing the arrow keys.(when it's focused)</li>
+                <li>Open/close the dropdown list by pressing the keys: [Space], [Enter], [Esc].</li>
+            </ul>
+        </div>
+        <form action="#" method="post" class="form" id="form1">
+            <div class="form-group">
+                <div class="form-label">
+                    <label for="location">Location:</label>
+                </div>
+                <div class="form-input">
+                    <select name="location" id="location" class="custom-select">
+                        <option value="Aktau">Aktau</option>
+                        <option value="Aktobe">Aktobe</option>
+                        <option value="Almaty">Almaty</option>
+                        <option value="Arkalyk">Arkalyk</option>
+                        <option value="Atyrau">Atyrau</option>
+                        <option value="Baikonur">Baikonur</option>
+                        <option value="Balqash">Balqash</option>
+                        <option value="Zhezkazgan">Zhezkazgan</option>
+                        <option value="Karagandy">Karagandy</option>
+                        <option value="Kentau">Kentau</option>
+                        <option value="Kyzylorda">Kyzylorda</option>
+                        <option value="Kokshetau">Kokshetau</option>
+                        <option value="Kostanay">Kostanay</option>
+
+                        <option value="Aktau">Aktau</option>
+                        <option value="Aktobe">Aktobe</option>
+                        <option value="Almaty">Almaty</option>
+                        <option value="Arkalyk">Arkalyk</option>
+                        <option value="Atyrau">Atyrau</option>
+                        <option value="Baikonur">Baikonur</option>
+                        <option value="Balqash">Balqash</option>
+                        <option value="Zhezkazgan">Zhezkazgan</option>
+                        <option value="Karagandy">Karagandy</option>
+                        <option value="Kentau">Kentau</option>
+                        <option value="Kyzylorda">Kyzylorda</option>
+                        <option value="Kokshetau">Kokshetau</option>
+                        <option value="Kostanay">Kostanay</option>
+
+                        <option value="Nur-Sultan" selected>Nur-Sultan</option>
+                        <option value="Taldykorgan">Taldykorgan</option>
+
+                        <option value="Aktau">Aktau</option>
+                        <option value="Aktobe">Aktobe</option>
+                        <option value="Almaty">Almaty</option>
+                        <option value="Arkalyk">Arkalyk</option>
+                        <option value="Atyrau">Atyrau</option>
+                        <option value="Baikonur">Baikonur</option>
+                        <option value="Balqash">Balqash</option>
+                        <option value="Zhezkazgan">Zhezkazgan</option>
+                        <option value="Karagandy">Karagandy</option>
+                        <option value="Kentau">Kentau</option>
+                        <option value="Kyzylorda">Kyzylorda</option>
+                        <option value="Kokshetau">Kokshetau</option>
+                        <option value="Kostanay">Kostanay</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-label">
+                    <label for="fav">Favorite website:</label>
+                </div>
+                <div class="form-input">
+                    <select name="fav" id="fav" class="custom-select">
+                        <option value="Youtube">Youtube</option>
+                        <option value="Facebook">Facebook</option>
+                        <option value="Twitter">Twitter</option>
+                        <option value="Instagram">Instagram</option>
+                        <option value="Amazone" selected>Amazone</option>
+                        <option value="Ebay">Ebay</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-input">
+                    <button type="submit">Submit</button>
+                </div>
+            </div>
+
+            <div id="submit-test"></div>
+        </form>
+    </body>
+</html>
