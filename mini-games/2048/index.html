@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./static/css/style.css" />
+        <title>2048 By Kainar</title>
+    </head>
+    <body>
+        <div id="header">
+            <div id="logo">2048</div>
+            <div id="points">
+                <div id="score">
+                    SCORE
+                    <span>0</span>
+                </div>
+                <div id="best">
+                    BEST
+                    <span>0</span>
+                </div>
+            </div>
+            <div id="intro">Join the tiles, get to <b>2048!</b></div>
+            <div id="new-game">
+                <button>New Game</button>
+            </div>
+        </div>
+
+        <audio id="audio-get-point" src="./static/sound/ding.mp3"></audio>
+        <div id="board"></div>
+
+        <div id="purposes">A clone of the original 2048 game. Just for practice purposes.</div>
+
+        <script src="./static/js/tile.js"></script>
+        <script src="./static/js/grid.js"></script>
+        <script src="./static/js/app.js"></script>
+    </body>
+</html>

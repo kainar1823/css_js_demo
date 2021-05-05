@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+body {
+    color: #eeeeee;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: rgb(250, 38, 160);
+    background: radial-gradient(circle, rgba(250, 38, 160, 1) 0%, rgba(245, 23, 32, 1) 100%);
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 50px 400px 1fr;
+    grid-template-columns: 1fr 200px 100px 1fr;
+}
+
+#title {
+    grid-row: 1 / 2;
+    grid-column: 2 / 4;
+
+    font-size: 1.6rem;
+    line-height: 50px;
+}
+
+#board-cnt {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#stat {
+    width: 95px;
+    overflow: hidden;
+
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+    padding-left: 5px;
+
+    li {
+        display: block;
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+    #next-cnt {
+        width: 90px;
+        height: 90px;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    h3 {
+        font-weight: normal;
+        font-size: 1rem;
+        padding-left: 5px;
+        font-style: italic;
+    }
+
+    span {
+        font-size: 1.2rem;
+        color: gold;
+        display: block;
+        padding-left: 5px;
+    }
+}
+
+#help {
+    grid-row: 3 / 4;
+    grid-column: 2 / 4;
+    padding-top: 1rem;
+
+    dt {
+        font-size: 1rem;
+    }
+
+    dd {
+        font-size: 0.8rem;
+        padding-left: 1rem;
+
+        span {
+            display: inline-block;
+            width: 100px;
+        }
+    }
+}
+
+/* buttons */
+$buttonSize: 70px;
+
+#buttons {
+    display: none;
+    grid-row: 3 / 4;
+    grid-column: 1 / 5;
+
+    position: relative;
+
+    div {
+        cursor: pointer;
+
+        background-color: gold;
+        color: #666;
+
+        width: $buttonSize;
+        height: $buttonSize;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+
+        font-size: 1.5rem;
+    }
+
+    .l {
+        bottom: 230px;
+        left: 20px;
+    }
+    .r {
+        bottom: 230px;
+        left: 150px;
+    }
+    .d {
+        bottom: 160px;
+        left: 85px;
+    }
+    .hd {
+        bottom: 160px;
+        left: 225px;
+        width: $buttonSize * 0.6;
+        height: $buttonSize * 0.6;
+    }
+    .rotate {
+        width: $buttonSize * 1.5;
+        height: $buttonSize * 1.5;
+        bottom: 220px;
+        right: 20px;
+        font-size: 2rem;
+    }
+
+    .s,
+    .p {
+        border-radius: 5px;
+        height: 30px;
+        width: 120px;
+
+        top: 15px;
+
+        span {
+            display: inline-block;
+            margin-left: 10px;
+            font-size: 0.8rem;
+            color: red;
+        }
+    }
+
+    .p {
+        left: 30px;
+        font-size: 1.2rem;
+    }
+
+    .s {
+        left: 160px;
+    }
+}
+
+/* break point */
+@media screen and (max-width: 800px) {
+    #buttons {
+        display: block;
+    }
+    #help {
+        display: none;
+    }
+}

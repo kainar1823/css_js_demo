@@ -2,9 +2,82 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Tetris | mini-game</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <title>Tetris Canvas - Kainar D.</title>
+        <!-- font awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+            integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
+            crossorigin="anonymous"
+        ></script>
+        <!-- font awesome -->
+        <link rel="stylesheet" href="./static/css/style.css" />
     </head>
-    <body></body>
+    <body>
+        <div id="container">
+            <div id="title">Tetris</div>
+
+            <div id="board-cnt">
+                <canvas id="board"></canvas>
+            </div>
+
+            <div id="stat">
+                <ul>
+                    <li id="next-cnt">
+                        <canvas id="next"></canvas>
+                    </li>
+                    <li>
+                        <h3>Level</h3>
+                        <span id="s-level">0</span>
+                    </li>
+                    <li>
+                        <h3>Score</h3>
+                        <span id="s-score">0</span>
+                    </li>
+                    <li>
+                        <h3>Lines</h3>
+                        <span id="s-lines">0</span>
+                    </li>
+                    <li>
+                        <h3>Hi-Score</h3>
+                        <span id="s-hi-score">0</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="help">
+                <dl>
+                    <dt>Control</dt>
+                    <dd><span>Start:</span>[Enter]</dd>
+                    <dd><span>Move left:</span>[A] / [<i class="fas fa-arrow-left"></i>]</dd>
+                    <dd><span>Move right:</span>[D] / [<i class="fas fa-arrow-right"></i>]</dd>
+                    <dd><span>Rotate:</span>[J] / [K / W / <i class="fas fa-arrow-up"></i>]</dd>
+                    <dd><span>Soft drop:</span>[S] / [<i class="fas fa-arrow-down"></i>]</dd>
+                    <dd><span>Hard drop:</span>[Space bar]</dd>
+                </dl>
+            </div>
+
+            <div id="buttons">
+                <div class="p"><i class="fas fa-mug-hot"></i><span>Pause</span></div>
+                <div class="s"><i class="fas fa-gamepad"></i><span>Start</span></div>
+
+                <div class="l"><i class="fas fa-chevron-left"></i></div>
+                <div class="r"><i class="fas fa-chevron-right"></i></div>
+                <div class="d"><i class="fas fa-chevron-down"></i></div>
+
+                <div class="hd"><i class="fas fa-angle-double-down"></i></div>
+                <div class="rotate"><i class="fas fa-sync-alt"></i></div>
+            </div>
+        </div>
+
+        <script src="./static/js/constants.js"></script>
+        <script src="./static/js/tetromino.js"></script>
+        <script src="./static/js/main.js"></script>
+    </body>
 </html>

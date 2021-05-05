@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./static/css/style.css" />
+        <title>Ping Pong</title>
+    </head>
+    <body>
+        <div class="container">
+            <div id="level-demo"></div>
+
+            <div id="title">Canvas Ping Pong</div>
+
+            <canvas id="cnv"></canvas>
+
+            <div id="sounds">
+                <audio src="./static/sounds/hits_wall.mp3" id="hits-wall"></audio>
+                <audio src="./static/sounds/hits_paddle.mp3" id="hits-paddle"></audio>
+                <audio src="./static/sounds/get_point.mp3" id="get-point"></audio>
+                <audio src="./static/sounds/lose_point.mp3" id="lose-point"></audio>
+                <audio src="./static/sounds/change_level.mp3" id="change-level"></audio>
+            </div>
+
+            <div id="ctrl">
+                <h3>Control</h3>
+                <ul>
+                    <li>Click on the play area to start/restart.</li>
+                    <li>Move the mouse to control the paddle.</li>
+                    <li>Press [M] to mute/unmute</li>
+                </ul>
+            </div>
+        </div>
+        <script src="./static/js/mian.js"></script>
+    </body>
+</html>

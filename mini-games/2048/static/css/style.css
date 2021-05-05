@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #faf8ef;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #776e65;
+}
+
+#header {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  margin: 30px 0 0px 0;
+  row-gap: 1rem;
+}
+
+#logo {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+#intro {
+  padding-top: 1rem;
+}
+
+#points {
+  display: flex;
+}
+#points div {
+  width: 50%;
+  border-radius: 3px;
+  background-color: #bbada0;
+  color: #eedbc0;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  margin-left: 0.5rem;
+  position: relative;
+}
+#points div span {
+  display: block;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+@-webkit-keyframes inc {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes inc {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+button {
+  outline: 0;
+  border: 0;
+  border-radius: 3px;
+  background-color: #8f7a66;
+  color: #f9f6f2;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+#new-game {
+  text-align: right;
+}
+
+#board {
+  position: relative;
+  background-color: #bbada0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+#board .bg {
+  position: absolute;
+  display: grid;
+}
+#board .bg span {
+  background-color: #cdc0b4;
+  border-radius: 3px;
+}
+#board .main {
+  position: absolute;
+  font-size: 20px;
+}
+#board .t {
+  position: absolute;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 3px;
+}
+#board .t.animate {
+  -webkit-animation: tileAnimate 300ms ease;
+          animation: tileAnimate 300ms ease;
+}
+
+@-webkit-keyframes tileAnimate {
+  0% {
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes tileAnimate {
+  0% {
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+#purposes {
+  padding: 10px 0 0 0;
+}/*# sourceMappingURL=style.css.map */
