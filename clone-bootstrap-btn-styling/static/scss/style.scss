@@ -1,0 +1,111 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+.grp {
+    margin: 0 2em;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    margin: 0;
+    padding: 1em 0;
+}
+
+/* button styles */
+$btn-def-bgcolor: #efefef;
+$btn-def-color: #333;
+$btn-def-bdcolor: #767676;
+
+$btn-colors: (
+    "primary": #007bff,
+    "secondary": #6c757d,
+    "success": #28a745,
+    "danger": #dc3545,
+    "warning": #ffc107,
+    "info": #17a2b8,
+);
+$btn-shadow-w: 3px;
+$btn-shadow-o: 0.3;
+
+@function focusShadow($c) {
+    $result: $btn-shadow-w $btn-shadow-w 0 0
+            rgba(
+                $color: $c,
+                $alpha: $btn-shadow-o,
+            ),
+        $btn-shadow-w * -1 $btn-shadow-w * -1 0 0
+            rgba(
+                $color: $c,
+                $alpha: $btn-shadow-o,
+            ),
+        $btn-shadow-w $btn-shadow-w * -1 0 0
+            rgba(
+                $color: $c,
+                $alpha: $btn-shadow-o,
+            ),
+        $btn-shadow-w * -1 $btn-shadow-w 0 0
+            rgba(
+                $color: $c,
+                $alpha: $btn-shadow-o,
+            );
+    @return $result;
+}
+
+.btn {
+    outline: none;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: $btn-def-bgcolor;
+    border: 1px solid $btn-def-bdcolor;
+    color: $btn-def-color;
+    font-size: 1em;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0.5em 1em;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        filter: brightness(0.9);
+    }
+
+    &:focus {
+        box-shadow: focusShadow($btn-def-bdcolor);
+    }
+
+    @each $name, $val in $btn-colors {
+        &.#{$name} {
+            border-color: #{$val};
+            background-color: #{$val};
+            color: white;
+
+            &:focus {
+                box-shadow: focusShadow($val);
+            }
+
+            &.outline {
+                background-color: white;
+                color: #{$val};
+            }
+        }
+    }
+
+    &.underline {
+        text-decoration: underline;
+    }
+
+    // &.warning {
+    //     color: #333;
+
+    //     &.outline {
+    //         color: #333;
+    //     }
+    // }
+}
