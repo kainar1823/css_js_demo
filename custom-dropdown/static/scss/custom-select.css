@@ -1,0 +1,68 @@
+.custom-select {
+  display: none;
+}
+
+.cs-container {
+  outline: none;
+  position: relative;
+  background-color: #fff;
+}
+.cs-container * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.cs-container:focus .cs-label {
+  box-shadow: inset 1px 1px 0px 0px #222222, inset -1px -1px 0px 0px #222222;
+}
+
+.cs-label {
+  outline: none;
+  border: 1px solid #222;
+  padding: 0.2em 1.5em 0.2em 0.5em;
+  border-radius: 3px;
+  position: relative;
+}
+.cs-label::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 0.3em solid transparent;
+  border-right: 0.3em solid transparent;
+  border-top: 0.3em solid #222;
+  position: absolute;
+  right: 0.5em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.cs-list {
+  list-style: none;
+  border: 1px solid #222;
+  border-top: 0;
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  z-index: 500;
+  padding: 0.2em 0;
+  max-height: 15em;
+  overflow: auto;
+}
+.cs-list.show {
+  display: block;
+}
+.cs-list li {
+  padding: 0.2em 0.5em;
+}
+.cs-list li.selected {
+  background-color: #1167e9;
+  color: #fff;
+}
+.cs-list li:hover {
+  background-color: #7badf8;
+  color: #fff;
+}

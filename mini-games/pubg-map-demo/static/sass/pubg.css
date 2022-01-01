@@ -1,0 +1,129 @@
+@font-face {
+  font-family: "pubg";
+  src: url("../fonts/pubg.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "pubg";
+  color: #ffff15;
+}
+
+ul {
+  list-style: none;
+}
+
+.bg {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background: url(../image/pubg-002.jpg) -150px 0 no-repeat;
+  background-size: cover;
+  filter: contrast(150%) blur(5px);
+}
+
+.map {
+  width: 800px;
+  height: 800px;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  background: url(../image/karakin-map.jpg) 0 0 no-repeat;
+  background-size: contain;
+  border: 0px solid white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.map .name {
+  position: absolute;
+  z-index: 100;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.8);
+  bottom: 20px;
+  left: 20px;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 0px black;
+}
+
+.blue {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3000px rgba(0, 0, 255, 0.3);
+  transition: all 100ms linear;
+}
+
+.zone {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: inset 1px 0 0 0 rgba(255, 255, 255, 0.6), inset 0 1px 0 0 rgba(255, 255, 255, 0.6), inset -1px 0 0 0 rgba(255, 255, 255, 0.6), inset 0 -1px 0 0 rgba(255, 255, 255, 0.6);
+  transition: width 0.3s linear, height 0.3s linear, left 0.3s linear, top 0.3s linear;
+  visibility: hidden;
+}
+
+.map-slct {
+  height: 800px;
+  position: absolute;
+  top: 50%;
+  left: calc(5% + 810px);
+  transform: translateY(-50%);
+}
+.map-slct ul li {
+  padding-bottom: 15px;
+  cursor: pointer;
+}
+.map-slct ul li :hover {
+  filter: brightness(150%);
+}
+.map-slct ul li.cur {
+  filter: brightness(150%);
+}
+.map-slct ul li img {
+  width: 80px;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.map-slct ul li span {
+  display: block;
+  letter-spacing: 3px;
+  font-size: 1.2rem;
+  text-shadow: 2px 2px 2px black;
+  text-align: center;
+  padding-top: 3px;
+}
+
+.tit {
+  position: absolute;
+  left: calc(5% + 1100px);
+  bottom: 20%;
+  font-size: 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+.tit .p1 {
+  display: inline-block;
+  color: #222;
+  padding: 3px 15px;
+  border: 1px solid #222;
+  background: linear-gradient(to bottom, #ffff15, #ec8004);
+}
+.tit .p2 {
+  font-size: 6rem;
+  background: linear-gradient(to bottom, #ffff15, #ec8004);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}

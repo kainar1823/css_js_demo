@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 16px/1.5 "Ubuntu", sans-serif;
+  background-color: #2c3e50;
+  color: #7f8c8d;
+  min-height: 100vh;
+}
+
+.container {
+  width: 80vw;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock {
+  width: 500px;
+  height: 500px;
+  position: relative;
+}
+.clock .plate,
+.clock .plate::before,
+.clock .plate::after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.clock .plate {
+  box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+.clock .plate::before {
+  content: "";
+  box-shadow: inset 5px 10px 10px 5px rgba(0, 0, 0, 0.05);
+  transform: scale(0.95);
+  z-index: 10;
+}
+.clock .plate::after {
+  content: "";
+  box-shadow: inset -5px -10px 5px 3px rgba(255, 255, 255, 0.05);
+  transform: scale(0.95);
+  z-index: 11;
+}
+.clock .brand {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.clock .brand img {
+  width: 15%;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.clock .dial {
+  position: absolute;
+  width: 425px;
+  height: 425px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.clock .dial .scale {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 10px;
+  overflow: hidden;
+  background-color: #516880;
+  transform-origin: center 212.5px;
+}
+.clock .dial .scale:nth-of-type(5n) {
+  height: 18px;
+  width: 3px;
+}
+.clock .dial .digit {
+  position: absolute;
+  font-size: 1.5em;
+  color: #516880;
+}
+.clock .dial .digit.d-12 {
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.clock .dial .digit.d-3 {
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+}
+.clock .dial .digit.d-6 {
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.clock .dial .digit.d-9 {
+  top: 50%;
+  left: 25px;
+  transform: translateY(-50%);
+}
+.clock .pointer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.clock .pointer .hour,
+.clock .pointer .minute,
+.clock .pointer .second {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 5px;
+  transform-origin: center bottom;
+  transition: transform 0.5s ease;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+}
+.clock .pointer .hour {
+  height: 20%;
+  width: 8px;
+  background-color: #95a5a6;
+  transform: translateX(-50%) rotate(0deg);
+}
+.clock .pointer .minute {
+  height: 28%;
+  background-color: #95a5a6;
+  transform: translateX(-50%) rotate(0deg);
+}
+.clock .pointer .second {
+  height: 39%;
+  width: 3px;
+  background-color: #d35400;
+  transform: translateX(-50%) rotate(0deg);
+}
+.clock .pointer .rivet {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #d35400;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.clock .date {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(70%, -50%);
+  background: #34495e;
+  font-weight: 500;
+  font-size: 15px;
+  width: 16%;
+  height: 6%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: inset 2px 2px 6px 1px rgba(0, 0, 0, 0.3);
+}
