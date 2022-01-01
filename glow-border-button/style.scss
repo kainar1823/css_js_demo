@@ -1,0 +1,260 @@
+:root {
+    --btn1-duration: 3000ms;
+    --btn2-duration: 3000ms;
+    --btn3-duration: 5000ms;
+}
+html {
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #060c1f;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.glow-border-btn {
+    background: transparent;
+    border: none;
+    margin: 0 2em;
+    padding: 0;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.glow-border-btn span {
+    position: relative;
+    display: block;
+    color: white;
+    background-color: #060c1f;
+    font-size: 2rem;
+    font-weight: bold;
+    z-index: 3;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+}
+
+.btn1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    z-index: -1;
+    background-color: #ffff01;
+    box-shadow: 0 0 17px 3px #ffff01, 0 0 4px 2px #ffff01;
+    animation: btn1_before var(--btn1-duration) ease 0s infinite reverse;
+}
+
+.btn1::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    z-index: -1;
+    background-color: #00ffff;
+    box-shadow: 0 0 17px 3px #00ffff, 0 0 4px 2px #00ffff;
+    animation: btn1_after var(--btn1-duration) ease 0s infinite reverse;
+}
+
+@keyframes btn1_before {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    25% {
+        top: 0;
+        left: 50%;
+    }
+    50% {
+        top: 50%;
+        left: 50%;
+    }
+    75% {
+        top: 50%;
+        left: 0;
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+
+@keyframes btn1_after {
+    0% {
+        top: 50%;
+        left: 50%;
+    }
+    25% {
+        top: 50%;
+        left: 0;
+    }
+    50% {
+        top: 0;
+        left: 0;
+    }
+    75% {
+        top: 0;
+        left: 50%;
+    }
+    100% {
+        top: 50%;
+        left: 50%;
+    }
+}
+
+.btn2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #c586c0;
+    box-shadow: 0 0 17px 3px #c586c0, 0 0 4px 2px #c586c0;
+    animation: btn2_before var(--btn2-duration) ease 0s infinite;
+}
+
+@keyframes btn2_before {
+    0% {
+        background-color: #ef4444;
+        box-shadow: 0 0 17px 3px #ef4444, 0 0 4px 2px #ef4444;
+    }
+    33% {
+        background-color: #ffff01;
+        box-shadow: 0 0 17px 3px #ffff01, 0 0 4px 2px #ffff01;
+    }
+    66% {
+        background-color: #00ffff;
+        box-shadow: 0 0 17px 3px #00ffff, 0 0 4px 2px #00ffff;
+    }
+    100% {
+        background-color: #ef4444;
+        box-shadow: 0 0 17px 3px #ef4444, 0 0 4px 2px #ef4444;
+    }
+}
+
+.btn3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    z-index: -1;
+    background-color: #ffff01;
+    box-shadow: 0 0 17px 3px #ffff01, 0 0 4px 2px #ffff01;
+    animation: btn3_before var(--btn3-duration) ease 0s infinite;
+}
+
+.btn3::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    z-index: -1;
+    background-color: #00ffff;
+    box-shadow: 0 0 17px 3px #00ffff, 0 0 4px 2px #00ffff;
+    animation: btn3_after var(--btn3-duration) ease 0s infinite;
+}
+
+@keyframes btn3_before {
+    0% {
+        top: 0;
+        left: 0;
+        height: 50%;
+        width: 50%;
+    }
+    16.66% {
+        top: 0;
+        left: 0;
+        height: 50%;
+        width: 100%;
+    }
+    32.32% {
+        top: 0;
+        left: 50%;
+        height: 50%;
+        width: 50%;
+    }
+    49.98% {
+        top: 50%;
+        left: 50%;
+        height: 50%;
+        width: 50%;
+    }
+    66.64% {
+        top: 50%;
+        left: 0;
+        height: 50%;
+        width: 100%;
+    }
+    83.3% {
+        top: 50%;
+        left: 0;
+        height: 50%;
+        width: 50%;
+    }
+    100% {
+        top: 0;
+        left: 0;
+        height: 50%;
+        width: 50%;
+    }
+}
+
+@keyframes btn3_after {
+    0% {
+        bottom: 0;
+        right: 0;
+        height: 50%;
+        width: 50%;
+    }
+    16.66% {
+        bottom: 0;
+        right: 0;
+        height: 50%;
+        width: 100%;
+    }
+    32.32% {
+        bottom: 0;
+        right: 50%;
+        height: 50%;
+        width: 50%;
+    }
+    49.98% {
+        bottom: 50%;
+        right: 50%;
+        height: 50%;
+        width: 50%;
+    }
+    66.64% {
+        bottom: 50%;
+        right: 0;
+        height: 50%;
+        width: 100%;
+    }
+    83.3% {
+        bottom: 50%;
+        right: 0;
+        height: 50%;
+        width: 50%;
+    }
+    100% {
+        bottom: 0;
+        right: 0;
+        height: 50%;
+        width: 50%;
+    }
+}
