@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap");
+/*
+  ---------------------------------
+  Custom properties
+  ---------------------------------
+*/
+:root {
+  --clr-dark: 48, 30, 63;
+  --clr-white: 255, 255, 255;
+  --fs-800: 3.5rem;
+  --fs-700: 2rem;
+  --fs-600: 1.75rem;
+  --fs-500: 1.125rem;
+  --fs-400: 1rem;
+  --fs-300: 0.875rem;
+  --fs-200: 0.75rem;
+  --ff-roboto: "Roboto", sans-serif;
+}
+
+/*
+  ---------------------------------
+  Reset
+  ---------------------------------
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-color: rgb(var(--clr-dark));
+  color: rgb(var(--clr-white));
+  font-family: var(--ff-roboto);
+  font-size: var(--fs-400);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* utilities */
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.ff-default {
+  font-family: var(--ff-roboto);
+}
+
+.fs-200 {
+  font-size: var(--fs-200);
+}
+
+.fs-300 {
+  font-size: var(--fs-300);
+}
+
+.fs-400 {
+  font-size: var(--fs-400);
+}
+
+.fs-500 {
+  font-size: var(--fs-500);
+}
+
+.fs-600 {
+  font-size: var(--fs-600);
+}
+
+.fs-700 {
+  font-size: var(--fs-700);
+}
+
+.fs-800 {
+  font-size: var(--fs-800);
+}
+
+.fw-normal {
+  font-weight: 400;
+}
+
+.fw-medium {
+  font-weight: 500;
+}
+
+.fw-bold {
+  font-weight: 900;
+}
+
+.letter-spacing-1 {
+  letter-spacing: 4.75px;
+}
+
+.letter-spacing-2 {
+  letter-spacing: 2.7px;
+}
+
+.letter-spacing-3 {
+  letter-spacing: 2.35px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+/* icons */
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  aspect-ratio: 1;
+  background-color: currentColor;
+  -webkit-mask-image: none;
+          mask-image: none;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  overflow: hidden;
+}
+.icon.i-diamond {
+  -webkit-mask-image: url(./svg/gem-solid.svg);
+          mask-image: url(./svg/gem-solid.svg);
+}
+.icon.i-globe {
+  -webkit-mask-image: url(./svg/earth-europe-solid.svg);
+          mask-image: url(./svg/earth-europe-solid.svg);
+}
+.icon.i-rocket {
+  -webkit-mask-image: url(./svg/rocket-solid.svg);
+          mask-image: url(./svg/rocket-solid.svg);
+}
+
+/* components */
+.container {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 400px;
+  height: 600px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 200px;
+  border-bottom-right-radius: 200px;
+  position: relative;
+  text-align: center;
+  padding-inline: 2em;
+  z-index: 1;
+}
+.card:nth-child(1) {
+  background: linear-gradient(to bottom, #de00f7 0%, #4a007c 100%);
+}
+.card:nth-child(2) {
+  background: linear-gradient(to bottom, #f3f700 0%, #ff3300 100%);
+}
+.card:nth-child(3) {
+  background: linear-gradient(to bottom, #00f74a 0%, #4400ff 100%);
+}
