@@ -13,7 +13,6 @@
   box-sizing: border-box;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 .cs-container:focus .cs-label {
@@ -59,10 +58,10 @@
   padding: 0.2em 0.5em;
 }
 .cs-list li.selected {
-  background-color: #1167e9;
+  background-color: rgb(17, 103, 233);
   color: #fff;
 }
 .cs-list li:hover {
-  background-color: #7badf8;
+  background-color: rgb(123, 173, 248);
   color: #fff;
-}/*# sourceMappingURL=custom-select.css.map */
+}

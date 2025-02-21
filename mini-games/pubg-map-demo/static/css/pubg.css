@@ -7,7 +7,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "pubg";
-  color: #ffff15;
+  color: rgb(255, 255, 21);
 }
 
 ul {
@@ -118,12 +118,12 @@ ul {
   color: #222;
   padding: 3px 15px;
   border: 1px solid #222;
-  background: linear-gradient(to bottom, #ffff15, #ec8004);
+  background: linear-gradient(to bottom, rgb(255, 255, 21), rgb(236, 128, 4));
 }
 .tit .p2 {
   font-size: 6rem;
-  background: linear-gradient(to bottom, #ffff15, #ec8004);
+  background: linear-gradient(to bottom, rgb(255, 255, 21), rgb(236, 128, 4));
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
-}/*# sourceMappingURL=pubg.css.map */
+}
